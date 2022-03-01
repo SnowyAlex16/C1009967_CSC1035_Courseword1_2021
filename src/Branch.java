@@ -40,6 +40,7 @@ public class Branch extends Sale{
         branches.SalesListAdd("New green","4","se16 5lj","3","3",4000);
         branches.ValueCompare(500,"South Essex");
         branches.HighestSale("South Essex");
+        branches.AverageSale("South Essex");
 
     }
     public void SalesListAdd(String branch_name, String house_number,String postcode, String year,String month, int value){
@@ -100,6 +101,29 @@ public class Branch extends Sale{
             System.out.println("This branch has no sales");
         }
 
+    }
+    public void AverageSale(String branch_name){
+        int looping_size = sale_list.size();
+        int average_divider = 0;
+        int new_value = 0;
+        boolean found=false;
+        for (int i = 0; i<looping_size;i++){
+            int value_store = value_list.get(i / 5);
+            String sale_store = sale_list.get(i);
+            if (branch_name.equals(sale_store)){
+                    average_divider++;
+                    new_value += value_store;
+                    found=true;
+            }
+        }
+        int average = new_value/average_divider;
+
+        if (found==true){
+            System.out.println(branch_name+ "Have an average sale of "+average);
+        }
+        else{
+            System.out.println("This branch has no sales");
+        }
     }
 
 }
