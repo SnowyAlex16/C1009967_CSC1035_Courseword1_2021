@@ -12,12 +12,23 @@ public class Sale {
         System.out.println(Sale1);
     }*/
 
-
-    public Sale(String house_number, String postcose, int value, String year, String month) {
+    public void setHouse_number(String house_number) {
         this.house_number = house_number;
+    }
+
+    public void setPostcose(String postcose) {
         this.postcose = postcose;
+    }
+
+    public void setValue(int value) {
         this.value = value;
+    }
+
+    public void setYear(String year) {
         this.year = year;
+    }
+
+    public void setMonth(String month) {
         this.month = month;
     }
 
