@@ -13,7 +13,7 @@ public class Reporting extends Branch{
         branches.SalesListAdd("South Essex","40","asda","10","2",70000);
         branches.SalesListAdd("South Essex","2","ne2 1dt","1","3",300);
         branches.SalesListAdd("New green","4","se16 5lj","3","3",4000);
-        branches.HighestAverageBranch();
+        branches.HighestAverageBranch("1");
         branches.HighestEverSale();
         branches.HigherSalesThanValue(500);
     }
@@ -27,14 +27,16 @@ public class Reporting extends Branch{
         return branch_name_list;
     }
 
-    public void HighestAverageBranch(){
+    public void HighestAverageBranch(String year){
         int looping_size = branch_name_list.size();
         int comparable_amount = 0;
         int new_amount = 0;
         int new_amount_hold = 0;
         String branch_name = "";
         for (int i = 0;i<looping_size;i++){
-            new_amount = AverageSale(branch_name_list.get(i),true);
+            new_amount = AverageSaleForYear(branch_name_list.get(i),true,year);
+
+
             if (comparable_amount < new_amount){
                 new_amount_hold = new_amount;
                 comparable_amount = new_amount;
@@ -44,10 +46,10 @@ public class Reporting extends Branch{
 
         }
         if (new_amount_hold == 0){
-            System.out.println("There are no branches with an average sale");
+            System.out.println("There are no branches with an average sale for year: "+year);
         }
         else {
-            System.out.println(branch_name + " Has the highest average sales with: " +new_amount_hold);
+            System.out.println(branch_name + " Has the highest average sales for year "+year+" with: " +new_amount_hold);
         }
     }
     public void HighestEverSale(){
