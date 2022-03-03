@@ -27,6 +27,10 @@ public class Reporting extends Branch{
         return branch_name_list;
     }
 
+    public void setBranch_name_list(List<String> branch_name_list) {
+        this.branch_name_list = branch_name_list;
+    }
+
     public void HighestAverageBranch(String year){
         int looping_size = branch_name_list.size();
         int comparable_amount = 0;
@@ -80,6 +84,9 @@ public class Reporting extends Branch{
         String branch_name = "";
         for (int i = 0;i<looping_size;i++){
             ValueCompare(value_compare,branch_name_list.get(i));
+        }
+        if (branch_name_list.size() == 0){
+            System.out.println("There are no branches to compare to");
         }
     }
 }

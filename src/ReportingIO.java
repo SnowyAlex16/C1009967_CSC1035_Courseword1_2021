@@ -64,10 +64,14 @@ public class ReportingIO extends  Reporting{
                 report.HighestAverageBranch(year);
             }
             if (user_input==4){
-
+                report.HighestEverSale();
             }
             if (user_input==5){
+                System.out.println("Please enter a value");
 
+                int value = sc.nextInt();
+
+                report.HigherSalesThanValue(value);
             }
             if (user_input==6){
                 quit = true;
