@@ -5,7 +5,7 @@ public class Reporting extends Branch{
     private List<String> branch_name_list = new ArrayList<>();
 
     public static void main(String[] args) {
-        Reporting branches = new Reporting();
+        /*Reporting branches = new Reporting();
         branches.addBranch_name("South Essex");
         branches.addBranch_name("New green");
         branches.SalesListAdd("South Essex","20","al4 321","3","3",3000);
@@ -15,7 +15,7 @@ public class Reporting extends Branch{
         branches.SalesListAdd("New green","4","se16 5lj","3","3",4000);
         branches.HighestAverageBranch("1");
         branches.HighestEverSale();
-        branches.HigherSalesThanValue(500);
+        branches.HigherSalesThanValue(500);*/
     }
 
     public void addBranch_name(String branch_name){

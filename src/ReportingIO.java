@@ -52,9 +52,9 @@ public class ReportingIO extends  Reporting{
             if(user_input==2){
                 System.out.println("What is the name of the branch you would like to create");
                 sc.nextLine();
-                String branch_name1 = sc.nextLine();
+                String branch_name = sc.nextLine();
 
-                report.addBranch_name(branch_name1);
+                report.addBranch_name(branch_name);
                 System.out.println("Branch added");
             }
             if (user_input==3){
